@@ -1,0 +1,1 @@
+select ip, count(ip) from gomlog group by ip order by count(ip) DESC LIMIT 50;

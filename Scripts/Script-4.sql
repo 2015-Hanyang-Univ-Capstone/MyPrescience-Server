@@ -1,0 +1,10 @@
+CREATE TABLE `gom_echo` (
+  `ip` varchar(30) DEFAULT NULL,
+  `date` varchar(20) DEFAULT NULL,
+  `time` varchar(70) DEFAULT NULL,
+  `song_id` varchar(100) DEFAULT NULL,
+  `genre` varchar(200) DEFAULT NULL,
+  `size` int(20) DEFAULT NULL,
+  `utc` int(6) DEFAULT NULL,
+  `version` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

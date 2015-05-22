@@ -1,0 +1,1 @@
+select title, count(title) from gomlog group by title order by count(title) DESC LIMIT 50;

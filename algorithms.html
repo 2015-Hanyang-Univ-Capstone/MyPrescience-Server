@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
+	<meta name="description" content="Bootstrap Metro Dashboard">
+	<meta name="author" content="Dennis Ji">
+	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	
+
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+		
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- end: Favicon -->
+	
+		
+		
+		
+</head>
+
+<body>
+		<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="brand" href="index.html"><span>My Prescience</span></a>
+			</div>
+		</div>
+	</div>
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="index.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a href="users.html"><i class="icon-user"></i><span class="hidden-tablet"> Users</span></a></li>
+						<li><a href="music.html"><i class="icon-music"></i><span class="hidden-tablet"> Music</span></a></li>
+						<li><a href="time.html"><i class="icon-circle"></i><span class="hidden-tablet"> Time</span></a></li>
+						<li><a href="os.html"><i class="icon-desktop"></i><span class="hidden-tablet"> OS</span></a></li>
+						<li><a href="country.html"><i class="icon-map-marker"></i><span class="hidden-tablet"> Country</span></a></li>
+						<li><a href="dbPretreatment.html"><i class="icon-tasks"></i><span class="hidden-tablet"> DB Pretreatment</span></a></li>
+						<li><a href="algorithms.html"><i class="icon-check"></i><span class="hidden-tablet"> Algorithms</span></a></li>
+						<li><a href="serverAPI.html"><i class="icon-tag"></i><span class="hidden-tablet">Server API</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			
+			<ul class="breadcrumb">
+				<li>
+					<i class="icon-home"></i>
+					<a href="index.html">Home</a> 
+					<i class="icon-angle-right"></i>
+				</li>
+				<li><a href="algorithms.html">Algorithms</a></li>
+			</ul>
+			
+			<div class="row-fluid">
+				
+
+			</div><!--/.fluid-container-->
+				
+				<ul>
+					<h1> Recommendation Algorithms </h1>
+					<h2> Item-Based Collaborative Filtering </h2>
+					<li> 유사도 기반의 추천 알고리즘으로, User-Base 보다 Item-Base의 정확도가 더욱 높다. </li>
+					<li> 일반적인 CF는 추천 알고리즘의 쉬운 예로서, 같은 장르의 음악, 동일 아티스트의 음악 등의 추천이다. </li>
+					<li> Cold Start의 경우, 노래추천함에 있어 인기도있는 노래일수록 만족도가 높다. </li>
+					<li> 추천에 사용되는 데이터로, Ranking이 있는데, 이는 명시적/암시적으로 나눌 수 있다. <br/>
+						 명시적(explicit)은 사용자가 직접 점수를 입력하는 경우이고 암시적(implicit )점수는 점수는 입력하지 않으나, 조회하거나 리뷰없이 구매하는 경우를 뜻한다. <br/>
+						 명시적 점수는 사용자가 점수를 선정하는 경우가 드물기 때문에, 데이터의 편차가 심해져 추천에 합당하지 않은 경우가 많다. <br/>
+					 	 그에 비해 암시적 점수는 조회한 경우, 구매한 경우, 출력된 내용 보지도 않은 경우등을 따져 각각 Rating을 하여 명시적 점수보다는 많은 데이터의 점수를 얻을 수 있다. </li>
+					<li> 결론, 명시적 점수와 암시적 점수의 기준을 잘 세우고, 두 점수를 혼합하여 Ranking을 계산하는 것이 주 추천기능이고,! <br/>
+						 Cold Start에 경우, 사용자가 선택한 Genre에 따라 인기도 높은 순으로 노래를 추천한다. 혹은 유사한 Song, Artist 기반의 노래를 추천하는 방법으로 데이터를 일정 수 까지 추가한다. </li>
+					
+					<hr/>
+					
+					<h2> Matrix Factorization Techniques</h2>
+					<li> Item-Based Collaborative Filtering 는 메모리기반 추천서비스로, 데이터의 양이 많으면 많아질수록 메모리에 과부하가 걸리게 된다. </li>
+					<li> 이러한 데이터의 크기 (data dimensionality)를 해결하기 위한 기법으로 행렬 분해를 통해 P*Q = R 의 P, Q의 행렬로 나누어 행렬 메모리 값을 저장할 수 있다. <br/>
+						 노래의 갯수 : n , 유저의 수 : m 일때, n * m 의 데이터 크기에서 ( n + m ) * k의 수로 (k는 임의의 수) 크기를 줄일 수 있게 된다. </li>
+					<li> Latent Factor Models are based on matrix factorization. </li>
+					<li> The model is closely related to singular value decomposition (SVD) </li>
+					<li> probabilistic matrix factorization </li>
+				</ul>
+				
+			</div>
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	<div class="modal hide fade" id="myModal">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h3>Settings</h3>
+		</div>
+		<div class="modal-body">
+			<p>Here settings can be configured...</p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal">Close</a>
+			<a href="#" class="btn btn-primary">Save changes</a>
+		</div>
+	</div>
+	
+	<div class="clearfix"></div>
+	
+	<footer>
+
+		<p>
+			<span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
+			
+		</p>
+
+	</footer>
+	
+	<!-- start: JavaScript-->
+
+		<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery-migrate-1.0.0.min.js"></script>
+	
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+	
+		<script src="js/jquery.ui.touch-punch.js"></script>
+	
+		<script src="js/modernizr.js"></script>
+	
+		<script src="js/bootstrap.min.js"></script>
+	
+		<script src="js/jquery.cookie.js"></script>
+	
+		<script src='js/fullcalendar.min.js'></script>
+	
+		<script src='js/jquery.dataTables.min.js'></script>
+
+		<script src="js/excanvas.js"></script>
+	<script src="js/jquery.flot.js"></script>
+	<script src="js/jquery.flot.pie.js"></script>
+	<script src="js/jquery.flot.stack.js"></script>
+	<script src="js/jquery.flot.resize.min.js"></script>
+	
+		<script src="js/jquery.chosen.min.js"></script>
+	
+		<script src="js/jquery.uniform.min.js"></script>
+		
+		<script src="js/jquery.cleditor.min.js"></script>
+	
+		<script src="js/jquery.noty.js"></script>
+	
+		<script src="js/jquery.elfinder.min.js"></script>
+	
+		<script src="js/jquery.raty.min.js"></script>
+	
+		<script src="js/jquery.iphone.toggle.js"></script>
+	
+		<script src="js/jquery.uploadify-3.1.min.js"></script>
+	
+		<script src="js/jquery.gritter.min.js"></script>
+	
+		<script src="js/jquery.imagesloaded.js"></script>
+	
+		<script src="js/jquery.masonry.min.js"></script>
+	
+		<script src="js/jquery.knob.modified.js"></script>
+	
+		<script src="js/jquery.sparkline.min.js"></script>
+	
+		<script src="js/counter.js"></script>
+	
+		<script src="js/retina.js"></script>
+
+		<script src="js/custom.js"></script>
+	<!-- end: JavaScript-->
+	
+</body>
+</html>

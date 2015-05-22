@@ -1,0 +1,12 @@
+CREATE TABLE `gomlog` (
+  `ip` varchar(30) DEFAULT NULL,
+  `date` varchar(20) DEFAULT NULL,
+  `time` varchar(70) DEFAULT NULL,
+  `title` varchar(200) DEFAULT NULL,
+  `artist` varchar(100) DEFAULT NULL,
+  `album` varchar(150) DEFAULT NULL,
+  `duration` int(11) DEFAULT NULL,
+  `size` int(20) DEFAULT NULL,
+  `utc` int(6) DEFAULT NULL,
+  `version` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

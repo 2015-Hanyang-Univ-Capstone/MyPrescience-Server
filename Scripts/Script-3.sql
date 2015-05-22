@@ -1,0 +1,1 @@
+select * from gomlog where artist = "이승철" and title LIKE '%My%Love%' ';

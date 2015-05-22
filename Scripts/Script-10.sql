@@ -1,0 +1,1 @@
+SELECT COUNT(artist) FROM gomlog;
